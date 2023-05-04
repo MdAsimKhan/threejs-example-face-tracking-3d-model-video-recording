@@ -131,7 +131,7 @@ const placeButton = document.getElementById('instructions') || document.createEl
 async function initRecorder() {
   const canvas = document.querySelector('canvas') || document.createElement('canvas');
 
-  const recorder = await ZapparVideoRecorder.createCanvasVideoRecorder(canvas);
+  const recorder = await ZapparVideoRecorder.createCanvasVideoRecorder(canvas, {audio:false});
   let recording = false;
 
   // When we start recording update text
